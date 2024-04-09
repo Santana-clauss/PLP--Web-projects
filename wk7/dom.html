@@ -10,9 +10,25 @@
     <button id="btn" name="btn1" class="btn_changed">Change text</button>
     <script>
         var btn=document.getElementById("btn");
-        var text = document.getElementsByName('btn1');
-        var btn=document.getElementsByClassName('btn_changed');
-
+        function changeText(){
+            var txt=document.getElementById("p_one");
+            txt.innerText="This is a lesson in HTML DOM,Events and event listeners";
+        }
+        // btn.addEventListener("click",changeText);
+        btn.addEventListener("click",changeText);
+        //pressing and releasing the mouse events
+        document.addEventListener("keydown",event=>{
+            console.log('You have pressed:',+event.key)});
+        document.addEventListener("keyup",event=>{
+            console.log('You have pressed:',+event.key)});
+        //mouse events
+        document.addEventListener("mousedown",event=>{
+            console.log("you have pressed the mouse button")
+        })
+        document.addEventListener("mouseup",event=>{
+            console.log("you have pressed the mouse button")
+        })
+        
     </script>
 </body>
 </html>
