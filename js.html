@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" action="">
+        <label for="name">UserName: </label><br />
+        <input type="text" id="name" name="name"><br />
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><br />
+        <label for="Password">Password</label><br>
+        <input type="password" id="Password" name="Password"><br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script>
+        // Get the form element by its ID
+        var form = document.getElementById('myForm');
+
+        // Add event listener for form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+           // event.preventDefault();
+            
+            // Get the values entered by the user
+            var username = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('Password').value;
+
+            // Display the values in an alert message
+            alert('Username: ' + username + '\nEmail: ' + email + '\nPassword: ' + password);
+        });
+    </script>
+</body>
+</html>

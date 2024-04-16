@@ -3,30 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dialog Box</title>
 </head>
 <body>
-   
-<div>
-  <p>Your Name please?</p>
-  <input type="text" placeholder="Enter name here" /> <br>
-  <button>Cancel</button>
-  <button>OK</button>
-</div>
 
 <script>
-const nameInput = document.querySelector('input');
-const cancelButton = document.querySelectorAll('button')[0];
-const okButton = document.querySelectorAll('button')[1];
+    // Display a confirmation dialog
+    var result = confirm("Your Name please?");
 
-
-cancelButton.addEventListener('click', () => {
-  nameInput.value = '';
-});
-
-okButton.addEventListener('click', () => {
-  alert(`You entered: ${nameInput.value}`);
-});
+    // Check the result of the confirmation dialog
+    if (result) {
+        // If the user clicks "OK", prompt for the name
+        var name = prompt("Enter name here", "");
+        if (name != null) {
+            // If the user enters a name, display it
+            alert("Hello, " + name + "!");
+        }
+    } else {
+        // If the user clicks "Cancel", display a message
+        alert("You clicked Cancel.");
+    }
 </script>
+
 </body>
 </html>
